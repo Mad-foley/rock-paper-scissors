@@ -7,7 +7,7 @@ function getComputerChoice() {
 
 let computerChoice = getComputerChoice();
 
-function winner (player, computer) {
+function playRound (player, computer) {
   if(choices.includes(player)) {
     if(player === computer) {
       return "Tie"
