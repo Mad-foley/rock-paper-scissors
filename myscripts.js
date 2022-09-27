@@ -18,8 +18,6 @@ function playRound (player, computer) {
   return "Please input: rock, paper or scissors"
 }
 
-const result = [];
-
 function game() {
   for (let i = 1; i < 6; i++ ) {
     console.log(`Round ${i}: `+ playRound(playerChoice, getComputerChoice()));
