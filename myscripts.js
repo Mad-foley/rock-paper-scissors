@@ -19,9 +19,11 @@ function playRound (player, computer) {
 }
 
 const result = [];
-for (let i = 0; i < 5; i++ ) {
-  result.push(playRound(playerChoice, getComputerChoice()));
+
+function game() {
+  for (let i = 1; i < 6; i++ ) {
+    console.log(`Round ${i}: `+ playRound(playerChoice, getComputerChoice()));
+  }
 }
 
-
-console.log(result);
+game();
