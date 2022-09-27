@@ -5,19 +5,23 @@ function getComputerChoice() {
   return choices[Math.floor(Math.random()*choices.length)];
 }
 
-let computerChoice = getComputerChoice();
-
 function playRound (player, computer) {
   if(choices.includes(player)) {
     if(player === computer) {
       return "Tie"
     } else if ((player === 'paper' && computer === 'rock') || (player === 'scissors' && computer === 'paper') || (player === 'rock' && computer === 'scissors')) {
-      return "You win!"
+      return "Winner"
     } else {
-      return "Computer wins!"
+      return "Loser"
     }
   }
   return "Please input: rock, paper or scissors"
 }
 
-console.log(winner(playerChoice, computerChoice))
+const result = [];
+for (let i = 0; i < 5; i++ ) {
+  result.push(playRound(playerChoice, getComputerChoice()));
+}
+
+
+console.log(result);
